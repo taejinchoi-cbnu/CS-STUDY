@@ -9,10 +9,6 @@
 ### 1.1.1. 폰 노이만의 한계
 폰 노이만 구조에서는 CPU와 메모리가 단일 버스를 통해 연결된다. 이때 명령어와 데이터가 같은 경로를 사용해 CPU와 메모리 사이를 오가는 과정에서 데이터 전송 속도가 제한되어 병목 현상(Bottleneck)이 발생한다.
 
-https://adeuran.tistory.com/20
-https://jerrycodezzz.tistory.com/94
-https://jiwondev.tistory.com/109
-
 ## 1.2. 시스템 버스
 컴퓨터의 구성요소 간의 데이터 및 신호 교환을 위한 통로
 
@@ -28,9 +24,6 @@ https://jiwondev.tistory.com/109
 - CPU에서 발생하는 제어 명령이나 상태 신호가 이동하는 통로
 - 양방향 버스
 
-https://youngkdevlog.tistory.com/62
-https://dheldh77.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EB%B2%84%EC%8A%A4System-bus
-
 ## 1.3. 명령어 사이클
 인출(Fetch) → 해독(Decode) → 실행(Execute) → 저장(Store) 순으로 진행된다.
 
@@ -38,8 +31,6 @@ https://dheldh77.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0
 2) Decode: 명령어 해석
 3) Execute: 해석한 명령어 실행
 4) Store: 실행 결과가 필요에 따라 메모리에 저장
-
-https://maloveforme.tistory.com/155
 
 # 2. CPU
 중앙처리장치(Central Processing Unit, CPU)
@@ -72,9 +63,6 @@ Fetch - Decode - Execute - Writeback 으로 총 4단계로 이루어진다.
 3) Execute(실행): 해석된 명령어에 따라 데이터에 대한 연산 수행
 4) Writeback(쓰기): 명령어대로 처리 완료된 데이터를 메모리에 기록
 
-https://jtm0609.tistory.com/166
-https://rangvest.tistory.com/entry/CPU%EC%9D%98-%EA%B5%AC%EC%A1%B0-%EB%B0%8F-%EC%9B%90%EB%A6%AC-CPU%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83
-
 ## 2.3. 명령어 처리 방식
 ISA(Instruction Set Architecture)는 CPU가 인식, 해석, 실행할 수 있는 명령어들의 모음이다. CPU가 작동하려면 프로그램이 있어야 하고 명령어를 주입해서 설계를 한다.
 ISA를 설계하고 구현하는데 있어서 대표적인 두 가지 컴퓨터 아키텍처가 CISC와 RISC이다.
@@ -92,10 +80,6 @@ ISA를 설계하고 구현하는데 있어서 대표적인 두 가지 컴퓨터 
 |많은 전력 소모|적은 전력 소모|
 |복잡한 하드웨어 구조|단순한 하드웨어 구조|
 |대표적으로 x86|대표적으로 ARM|
-
-https://velog.io/@cozyhama/CISC-VS-RISC-x86-VS-ARM
-https://devyonghee.github.io/theory/2022/09/27/CISC-RISC/
-
 
 ## 2.4. 파이프라인 해저드(Pipeline Hazard)
 #### 파이프라이닝이란?
@@ -117,9 +101,6 @@ CPU가 파이프라이닝으로 병렬적으로 처리하게 될 때 다음 명�
 - 원인: 프로그램이 근본적으로 갖는 의존성의 문제, 분기 명령어 실행으로 인해 발생
 - 해결: Stall, 분기 예측 
 
-https://yesdohyun.tistory.com/79
-https://80000coding.oopy.io/e20ff4ae-ee5a-40dc-9c23-13a369e296d6
-
 # 3. 기억장치 계층 구조(Memory Hierarchy)
 
 메모리 계층이란 필요에 따라 여러가지 종류로 나눈 것으로 레지스터, 캐시, 메모리(RAM), 하드디스크(저장장치)로 구성되어 있다.
@@ -137,4 +118,26 @@ https://80000coding.oopy.io/e20ff4ae-ee5a-40dc-9c23-13a369e296d6
 - HDD, SSD
 - 비휘발성이며, 속도가 느리며 기억 용량이 많다.
 
+* * *
+#### 폰 노이만 구조
+https://adeuran.tistory.com/20   
+https://jerrycodezzz.tistory.com/94   
+https://jiwondev.tistory.com/109   
+
+#### 시스템 버스
+https://youngkdevlog.tistory.com/62   
+https://dheldh77.tistory.com/entry/%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B5%AC%EC%A1%B0-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EB%B2%84%EC%8A%A4System-bus   
+
+#### 명령어 사이클
+https://maloveforme.tistory.com/155   
+
+#### CPU
+https://jtm0609.tistory.com/166   
+https://rangvest.tistory.com/entry/CPU%EC%9D%98-%EA%B5%AC%EC%A1%B0-%EB%B0%8F-%EC%9B%90%EB%A6%AC-CPU%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83   
+https://velog.io/@cozyhama/CISC-VS-RISC-x86-VS-ARM   
+https://devyonghee.github.io/theory/2022/09/27/CISC-RISC/   
+
+#### 파이프라인 해저드
+https://yesdohyun.tistory.com/79   
+https://80000coding.oopy.io/e20ff4ae-ee5a-40dc-9c23-13a369e296d6   
 

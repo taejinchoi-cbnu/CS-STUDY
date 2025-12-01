@@ -118,6 +118,94 @@ class DoublyLinkedList {
 
 ***
 
+# 3. Stack
+- '쌓다', '쌓이다'
+- 데이터를 순서대로 쌓는 자료 구조
+
+<img width="700" height="300" src="https://github.com/user-attachments/assets/5ef17334-ac20-4813-8743-91489cd98c1e" />
+
+## 3.1. 특징
+- LIFO(Last In First Out, 후입선출)
+- 데이터의 삽입과 삭제는 top이라고 일컫는 한 쪽 끝에서만 이루어지도록 제한하여 만든 자료구조
+## 3.2. 기본 연산
+1. push()
+- stack의 제일 위에 데이터를 추가하는 연산
+2. pop()
+- stack의 제일 위의 데이터를 제거하고 반환하는 연산
+3. peek()
+- stack의 제일 위의 데이터를 반환하는 연산
+4. isEmpty()
+- stack이 비어있는지 확인하는 연산
+## 3.3. 장단점
+- 장점
+    - 간단한 구현
+    - 빠른 속도
+- 단점
+    - 크기 제한
+## 3.4. 예시코드
+```
+public class ArrayStack {
+    int top;
+    int size;
+    int [] stack;
+
+    public ArrayStack(int size) {
+        this.size = size;
+        stack = new int[size];
+        top = -1;
+    }
+
+    public void push (int item) {
+        stack[++top] = item;
+    }
+
+    public void pop () {
+        int pop = stack[pop];
+        stack[top--] = 0;
+    }
+}
+```
+
+***
+
+# 4. Queue
+- '줄을 서서 기다린다', '대기행렬'
+
+## 4.1. 특징
+- FIFO(First In First Out)
+- 데이터는 하나씩 출입 가능
+- 두 개의 입출력 방향
+
+## 4.2. 기본 연산
+1. add()
+- Queue의 rear에 데이터 추가
+2. poll()
+- Queue의 front의 데이터를 제거하고 반환
+- 비어있을 경우 null 반환
+3. remove()
+- poll()과 동일하지만 큐가 비어있으면 NoSuchElement 에러 반환
+4. peek()
+- Queue의 front 데이터 반환
+5. isEmpty()
+- Queue가 비어있는지 확인
+## 4.3. 장단점
+- 장점
+    - 순서가 중요한 상황에 활용
+    - 배열이나 연결 리스트 구현에 적합
+- 단점
+    - 큐에서 임의의 위치에 있는 항목에 접근 어려움
+    - ㅂ열 기반의 구현에서 크기가 고정되어 있어 확정 어려움
+## 4.4. 종류
+
+| 종류 | 정의 |
+| :---: | :--- |
+| 선형 큐 | 일반적인 큐로, 데이터가 선형적으로 저장 <br>배열이나 연결리스트로 구현가능 |
+| 원형 큐 | 선형 큐의 한 종류로, rear와 front가 순환적으로 움직임 |
+| 우선순위 큐 | 각 데이터의 우선순위가 정해져 있고, 우선순위에 따라 삭제 및 검색이 이루어지는 큐 <br> Heap과 같은 자료구조 규현 |
+| 덱 | 양쪽 끝에서 데이터의 삽입과 삭제가 가능한 큐로, 스택과 큐의 기능을 모두 가짐 |
+
+***
+
 
 
 ***
@@ -127,3 +215,7 @@ https://velog.io/@newdana01/CS-Array%EC%99%80-LinkedList-%EC%A0%95%EC%9D%98-%EC%
 ## LinkedList
 https://hoehen-flug.tistory.com/29
 https://mongsil-jeong.tistory.com/58
+## Stack
+https://velog.io/@rlvy98/CS-%EC%8A%A4%ED%83%9DStack
+## Queue
+https://jyunslog.tistory.com/56

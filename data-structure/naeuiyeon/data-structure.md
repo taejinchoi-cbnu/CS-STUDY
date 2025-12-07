@@ -206,7 +206,107 @@ public class ArrayStack {
 
 ***
 
+# 5. Deque
+- Double - Ended Queue
+- 한쪽에서만 삽입, 다른 한쪽에서만 삭제가 가능했던 Queue와 달리 양쪽 front, rear에서 삽입/삭제가 모두 가능한 자료구조
 
+<img width="1618" height="1026" src="https://github.com/user-attachments/assets/9e055f55-6fcc-46e4-99d0-7e2dce777b76" />
+
+# 5.1. 기본 연산
+1. create()
+- 덱 생성
+2. init(dq)
+- 덱 초기화
+3. is_empty(dq)
+- 덱이 비어있는지 검사
+4. is_full(dq)
+- 덱이 꽉 차있는지 검사
+5. add_front(dq, e)
+- 덱의 앞 원소 추가
+6. add_rear(dq, e)
+- 덱의 뒤 운소 추가
+7. delete_front(dq)
+- 덱의 앞 원소 제거 및 반환
+8. delete_rear(dq)
+- 덱의 뒤 원소 제거 및 반환
+9. pop_front(q)
+- 덱의 앞 원소 반환
+10. pop_rear(q)
+
+<img width="1217" height="807" src="https://github.com/user-attachments/assets/5ca168e6-2fc9-4ffd-a18c-d9ef8e1bca0c" />
+- 덱의 뒤 원소 반환
+
+# 6. HashTable
+- (Key, Value)로 데이터를 저장하는 자료구조
+- 빠르게 데이터를 검색 가능
+
+<img width="315" height="230" src="https://github.com/user-attachments/assets/e1d90c72-6c48-42c3-a9cc-254a2e42730c" />
+
+## 6.1. Hash 함수
+1. Divison Method
+- 나눈셈을 이용하는 방법으로 입력값을 테이블의 크기로 나누어 계산
+2. Digit Folding
+- 각 Key의 문자열을 ASCII 코드로 바꾸고 값을 합한 데이터를 테이블 내의 주소로 사용
+3. Multiplication Method
+- 숫자로 된 Key값 K와 0과 1사이의 실수 A, 보통 2의 제곱수인 m을 사용하여 다음과 같은 계산을 해줌
+- h(k) = (kAmod1) * m
+4. Univeral Hashing
+- 다수의 해시함수를 만들어 집합 H에 넣어두고 무작위로 해시함수를 선택해 해시값을 만드는 기법
+## 6.2. Hash 값이 충동하는 경우
+### 6.2.1. 분리 연결법 (Separate Chaining)
+- 동일한 버킷의 데이터에 대해 자료구조를 활용해 추가 메모리를 사용하여 다음 데이터의 주소를 저장
+- 장점
+    - 해시 테이블의 확장이 필요없고 간단학 구현이 가능하며, 손쉽게 삭제 가능
+- 단점
+    - 데이터의 수가 많아지면 동일한 버킷에 chaining되는 데이터가 많아지며 그에 따라 캐시의 효율성 감소
+### 6.2.2. 개방 주소법(Open Addressing)
+- 추가적인 메모리를 사용하는 Chainig 방식과 다르게 비어있는 해시 테이블의 공간을 활용하는 방법
+1. Linear Probing
+- 현재의 버킷 index로부터 고정폭만큼씩 이동하여 차례대로 검색해 비어 있는 버킷에 데이터 저장
+2. Quadratic Probing
+- 해시의 저장순서 폭을 제곱으로 저장하는 방식 
+3. Double Hashing Probing
+- 해시된 값을 한번 더 해싱하여 해시의 규칙성을 없애버리는 방식 
+- 해시된 값을 한 번 더 해싱하여 새로운 주소를 할당하기 때문에 다른 방법들보다 많은 연산 소요
+
+***
+
+# 7. Heap Tree
+- 배열의 원소를 정렬하기 위한 구조
+## 7.1. Heap
+### 7.1.1. Max Heap
+- 각 노드의 키값이 그 자식의 키값보다 작지 않은 트리
+- 최대 트리(Max Tree) 이면서 완전 이진 트리(Complete Binary Tree)
+### 7.1.2. Min Heap
+- 각 노드의 키 값이 그 자식의 키값보다 크지 않은 트리
+- 최소 트리(Min Tree) 이면서 완전 이진 트리(Complete Binary Tree)
+### 7.1.3. Complete Binary Tree
+- 두 개의 자식 노드만 갖는 이진 트리 중 노드가 왼쪽부터 차례대로 채워져 있는 트리
+
+<img width="840" height="432" src="https://github.com/user-attachments/assets/550ca68e-1be0-43c8-9478-67990658fe34" />
+
+## 7.2. 장단점
+- 장점
+    - 빠른 삽입 및 삭제
+    - 우선 순위 기반 작업 처리
+- 단점
+    - 임의 접근 어려움
+    - 정렬 유지의 오버헤드
+    - 배열로 구현 시 추가적인 공간 요구
+
+## 7.3. Heap의 응용 
+1. 우선순위 큐(Priority Queue)
+- 요소가 들어온 순서가 아니라 우선 순위에 따라 처리되며, Heap은 최댓값 또는 최솟값을 효율적으로 관리하는데 유리
+- 기본적으로 오름차순으로 동작하며, 사용자가 정의한 우선순위로 정렬 가능
+2. 힙 정렬(Heap Sort)
+- 정렬 알고리즘으로, 최대 힙이나 최소 힙을 구성한 후, 루트 노드를 제거하고 재정렬하는 과정을 반복해 정렬을 수행
+- 비교 기반 정렬 알고리즘 중 효율적
+- 제자리 정렬이 가능하지만 안정적인 정렬은 아니다
+3. 다익스트라 알고리즘(Dijkstra's Algorithm)
+- 최단 경로 알고리즘 중 하나로, 우선순위 큐를 사용해 가중치가 있는 그래프에서 최단 경로를 찾음
+- 이 과정에서 최소 힙이 사용되어, 현재까지 가장 작은 거리를 가진 정점을 효율적으로 선택 가능
+4. 이진 힙(Binary Heap)과 페어링 힙(Pairing Heap)
+- 이진 힙은 가장 기본적인 형태이고, 페어링 힙은 더 복잡하지만 삽입과 삭제가 효율적
 
 ***
 # 참고자료
@@ -218,4 +318,12 @@ https://mongsil-jeong.tistory.com/58
 ## Stack
 https://velog.io/@rlvy98/CS-%EC%8A%A4%ED%83%9DStack
 ## Queue
-https://jyunslog.tistory.com/56
+https://jyunslog.tistory.com/
+## Deque
+https://velog.io/@nnnyeong/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%8A%A4%ED%83%9D-Stack-%ED%81%90-Queue-%EB%8D%B1-Deque
+https://laurent.tistory.com/entry/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EB%8D%B1-Deque
+## HashTable
+https://mangkyu.tistory.com/102
+## Tree
+https://velog.io/@redgem92/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%9E%99-%ED%8A%B8%EB%A6%ACHeap-Tree
+https://juhee-maeng.tistory.com/entry/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%9E%99Heap%EC%9D%B4%EB%9E%80-%EC%B5%9C%EB%8C%80%ED%9E%99Max-Heap%EA%B3%BC-%EC%B5%9C%EC%86%8C%ED%9E%99Min-Heap

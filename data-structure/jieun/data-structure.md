@@ -6,7 +6,7 @@
 
 # 1. Array
 ## 1.1. Array 란?
-<img width="450" height="245" alt="Image" src="https://github.com/user-attachments/assets/e5c04dd6-5829-4e0b-a8f0-5a3593672034" />
+<img width="750" height="245" alt="Image" src="https://github.com/user-attachments/assets/e5c04dd6-5829-4e0b-a8f0-5a3593672034" />
 
 - 동일한 데이터 타입의 요소들을 연속된 메모리 공간에 저장하는 방법이다.
 - 배열을 구성하는 각각의 값을 요소(element), 배열에서 위치를 가리키는 숫자를 인덱스(index)라고 한다.
@@ -38,7 +38,7 @@
 * * *
 # 2. Linked List
 ## 2.1. Linked List 란?
-<img width="450" height="177" alt="Image" src="https://github.com/user-attachments/assets/8a903550-8232-4e02-aca5-15b7e65df428" />
+<img width="650" height="177" alt="Image" src="https://github.com/user-attachments/assets/8a903550-8232-4e02-aca5-15b7e65df428" />
 
 - 여러 개의 노드들이 순차적으로 연결된 형태이다.
 - 첫 번째 노드를 head, 마지막 노드를 tail이라고 한다.
@@ -53,12 +53,12 @@
 - 각 노드에 자료 공간과 한 개의 포인터 공간이 있고, 각 노드의 포인터는 다음 노드를 가리킨다.
 
 #### Doubly Linked Linear List
-<img width="450" height="86" alt="Image" src="https://github.com/user-attachments/assets/2646bb51-1a72-46e7-8a15-b7e67eb659ee" />
+<img width="650" height="86" alt="Image" src="https://github.com/user-attachments/assets/2646bb51-1a72-46e7-8a15-b7e67eb659ee" />
 
 - 단일 연결 리스트와 비슷하지만, 포인터 공간이 두 개가 있고 각 포인터는 앞 / 뒤 노드를 가리킨다.
 
 #### Circularyly Linked Linear List
-<img width="450" height="219" alt="Image" src="https://github.com/user-attachments/assets/9e1a5838-da4b-4e64-89fb-23af721100d9" />
+<img width="400" height="219" alt="Image" src="https://github.com/user-attachments/assets/9e1a5838-da4b-4e64-89fb-23af721100d9" />
 
 - 일반적인 Linked List에 마지막 노드와 처음 노드를 연결시켜 원형으로 만든 구조이다.
 
@@ -110,7 +110,14 @@
 - DFS 알고리즘
 - 작업 실행 취소와 같은 역추적 작업이 필요하거나 괄호 검사, 후위 연산법, 문자열 역순 출력 등에 사용한다.
 
-## 3.3. 시간 복잡도
+## 3.3. Stack의 연산
+- push(): 데이터 삽입
+- pop(): 데이터 삭제
+- is_empty(): 스택이 공백 상태인지 검사
+- is_full(): 스택이 포화 상태인지 검사
+- peek(s): 요소를 스택에서 삭제하지 않고 보기만 하는 연산
+
+## 3.4. 시간 복잡도
 - 삽입 / 삭제: O(1)
 * * *
 # 4. Queue
@@ -120,17 +127,18 @@
 - 양 쪽 끝에서 데이터의 삽입과 삭제가 이루어지는 형태이다.
 - FIFO(First In First Out) 방식으로 동작한다.
 - 데이터가 삽입되는 곳을 rear, 데이터가 제거되는 곳을 front라고 한다.
-- Pop 및 Push 전에는 Queue의 Empty/Full 여부를 확인 후 진행해야 한다.
+- 데이터 삽입 및 삭제 전에는 Queue의 Empty/Full 여부를 확인 후 진행해야 한다.
 
 ## 4.2. Queue의 구분
 #### Linear Queue
-<img width="450" height="196" alt="Image" src="https://github.com/user-attachments/assets/77ad70c6-1002-4b12-bcd9-e2810b855892" />
+<img width="850" height="196" alt="Image" src="https://github.com/user-attachments/assets/77ad70c6-1002-4b12-bcd9-e2810b855892" />
+
 - 선형 배열을 사용하여 구현된 Queue이다.
 - 삽입을 위해서는 계속해서 요소들을 이동시켜야 한다.
 - front/rear는 증가만 하는 방식으로, 실제로 front 앞 쪽에 공간이 있더라도 삽입할 수 없는 경우가 발생할 수 있다.
 
 #### Circular Queue
-<img width="450" height="1264" alt="Image" src="https://github.com/user-attachments/assets/9785dbb6-f32f-42d2-ab25-12e4e56a61b1" />
+<img width="650" height="1264" alt="Image" src="https://github.com/user-attachments/assets/9785dbb6-f32f-42d2-ab25-12e4e56a61b1" />
 
 - Linear Queue의 단점을 보완한 형태이다.
 - front는 첫 번째 요소 바로 앞을 rear는 마지막 요소를 가리킨다.
@@ -147,7 +155,16 @@
 - BFS 알고리즘
 - 데이터를 입력된 순서대로 처리해야 할 때 또는 프로세스 관리, 대기 순서 관리 등에 사용한다.
 
-### 4.4. 시간 복잡도
+## 4.4. Queue의 연산
+- init(): 초기화
+- enqueue(e): 주어진 요소 e를 Queue의 맨 뒤에 추가
+- dequeue(): Queue가 비어있지 않으면 맨 앞 요소를 삭제하고 반환
+- is_empty: Queue가 비어있으면 true, 아니면 false 반환
+- peek(): Queue가 비어있지 않으면 맨 앞 요소를 삭제하지 않고 반환
+- is_full(): Queue가 가득 차 있으면 ture, 아니면 false 반환
+- size(): Queue의 모든 요소들의 개수를 반환
+
+## 4.5. 시간 복잡도
 - 삽입 / 삭제: O(1)
 * * *
 # 5. Deque
@@ -216,8 +233,66 @@
 - 탐색: O(1)
 - 삽입 / 삭제: O(1)
 - 데이터의 충돌이 자주 발생할 경우 O(n)이 될 수 있다.
+* * *
+# 7. Tree
+## 7.1. Tree 란?
+- 부모-자식 관계의 노드들로 이루어져 있는 비선형 계층적 자료구조이다.
+- 하나의 루트 노드를 가지고, 루트 노드는 0개 이상의 자식 노드를 갖는다.
+- node들과 node들을 연결하는 edge들로 구성되어 있다.
 
-## 7. Tree
+<img width="650" height="732" alt="Image" src="https://github.com/user-attachments/assets/d4d1e2c9-6419-4c71-96c3-f229e1f5d9c2" />
+
+- 루트 노드(root node): 부모가 없는 노드, 트리는 하나의 루트 노드만을 가진다.
+- 외부 노드(external node): 자식이 없는 노드이다. (= 단말 노드, leaf node)
+- 내부 노드(internal node): 자식 노드 하나 이상 가진 노드이다. (= 비단말 노드, branch node)
+- 간선(edge): 노드를 연결하는 선, 'link' 또는 'branch'라고도 부른다.
+- 형제(sibling): 같은 부모를 가지는 노드이다.
+- 깊이(depth): 루트에서 어떤 노드에 도달하기 위해 거쳐야 하는 간선의 수이다.
+- 높이(height): 루트 노드에서 가장 깊숙히 있는 노드의 깊이이다.
+- Size: 자신을 포함한 모든 자손 노드의 개수이다.
+- Level: 트리의 특정 깊이를 가지는 노드의 집합이다.
+- Degree: 노드의 자식 수이다.
+
+## 7.2. 특징
+- 하나의 루트 노드와 0개 이상의 하위 트리로 구성되어 있다.
+- 데이터를 순차적으로 저장하지 않기 때문에 비선형 자료구조이다.
+- 트리 내에 또 다른 트리가 있는 재귀적 자료구조이다.
+- 단순 순환(Loop)를 갖지 않고, 연결된 무방향 그래프 구조이다.
+- 노드 간에 부모 자식 관계를 갖고 있는 계층형 자료구조이며, 모든 자식 노드는 하나의 부모 노드만 갖는다.
+- 노드가 n개인 트리는 항상 n-1개인 간선(edge)을 가진다.
+
+# 8. Heap
+## 8.1. Heap 이란?
+- 완전 이진 트리의 일종으로 우선순위 Queue를 위해 만들어진 자료구조이다.
+- 여러 개의 값들 중에서 최댓값이나 최솟값을 빠르게 찾아내도록 만들어졌다.
+- 일종의 반정령 상태(느슨한 정렬 상태)를 유지한다.
+- 중복된 값을 허용한다.
+
+## 8.2. Heap의 종류
+
+<img width="650" height="711" alt="Image" src="https://github.com/user-attachments/assets/3d23a1a1-fb23-476f-844b-c11e9a9f2d9b" />
+
+- **최대 힙(max heap)**
+    - 부모 노드의 키 값이 자식 노드의 키 값보다 크거나 같은 완전 이진 트리
+    - key(부모 노드) ≥ key(자식 노드)
+- **최소 힙(min heap)**
+    - 부모 노드의 키 값이 자식 노드의  키 값보다 작거나 같은 완전 이진 트리
+    - key(부모 노드) ≤ key(자식 노드)
+
+## 8.3. Heap의 특징
+- 보통 배열을 이용하여 구현한다.
+- 구현을 쉽게 하기 위해서 인덱스 1부터 시작한다.
+
+<img width="650" height="997" alt="Image" src="https://github.com/user-attachments/assets/f2fe17ce-eb69-46ad-8bcf-cd9772594a80" />
+
+- 인덱스
+    - 왼쪽 자식의 인덱스: [부모 인덱스] * 2
+    - 오른쪽 자식의 인덱스: [부모 인덱스] * 2 + 1
+    - 부모의 인덱스: [자식 인덱스] / 2
+
+## 8.4. 시간 복잡도
+- 삽입 / 삭제: O(logN)
+
 
 * * *
 **배열/연결리스트** <br>
@@ -227,8 +302,14 @@ https://yoongrammer.tistory.com/44 <br>
 
 **스택/큐/덱** <br>
 https://velog.io/@nnnyeong/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%EC%8A%A4%ED%83%9D-Stack-%ED%81%90-Queue-%EB%8D%B1-Deque <br>
+https://comdolidol-i.tistory.com/44 <br>
+https://comdolidol-i.tistory.com/47 <br>
 https://bigsong.tistory.com/32 <br>
 
+
 **해시테이블**
+https://mojing.tistory.com/entry/Data-Structure-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%95%B4%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94Hash-Table <br>
 
-
+**트리/힙**
+https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html#google_vignette <br>
+https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html <br>

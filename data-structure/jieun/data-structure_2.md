@@ -1,7 +1,7 @@
 # 1. Binary Tree
 ## 1.1. 이진 트리(Binary Tree)란?
 
-<img width="416" height="332" alt="Image" src="https://github.com/user-attachments/assets/9090ca91-7c0e-4369-9260-1ce06828ee85" />
+<img width="300" height="332" alt="Image" src="https://github.com/user-attachments/assets/9090ca91-7c0e-4369-9260-1ce06828ee85" />
 
 - 각 노드가 최대 두 개의 자식 노드를 갖는 트리이다.
 - 각 노드는 자식이 0개, 1개, 2개가 있을 수 있다.
@@ -11,7 +11,7 @@
 
 #### 포화 이진 트리(Perfect Binary Tree)
 
-<img width="520" height="401" alt="Image" src="https://github.com/user-attachments/assets/a242c9da-8ccd-46ec-a941-1b564537f53f" />
+<img width="400" height="401" alt="Image" src="https://github.com/user-attachments/assets/a242c9da-8ccd-46ec-a941-1b564537f53f" />
 
 - 모든 레벨이 노드로 꽉 차 있는 트리이다.
 - 모든 리프 노드가 동일한 깊이를 가진다.
@@ -20,14 +20,14 @@
 
 #### 완전 이진 트리(Complete Binary Tree)
 
-<img width="622" height="525" alt="Image" src="https://github.com/user-attachments/assets/b4634da9-8623-4d5b-8037-668a8a043bb1" />
+<img width="400" height="525" alt="Image" src="https://github.com/user-attachments/assets/b4634da9-8623-4d5b-8037-668a8a043bb1" />
 
 - 마지막 레벨을 제외한 모든 레벨이 완전히 채워진 트리이다.
 - 노드는 왼쪽에서 오른쪽으로 채워져야 한다.
 
 #### 전 이진 트리(Full Binary Tree)
 
-<img width="639" height="508" alt="Image" src="https://github.com/user-attachments/assets/8b57c2ec-6111-4fa1-b473-ba999a122611" />
+<img width="400" height="508" alt="Image" src="https://github.com/user-attachments/assets/8b57c2ec-6111-4fa1-b473-ba999a122611" />
 
 - 각 노드가 0개 또는 2개의 자식만 가지는 트리이다.
 - 1개의 자식 노드를 가지는 노드는 없어야 한다.
@@ -35,7 +35,7 @@
 
 #### 편향 트리(Skewed Binary Tree)
 
-<img width="787" height="545" alt="Image" src="https://github.com/user-attachments/assets/1e901f8a-c18d-48b8-abf4-33c638279a7d" />
+<img width="500" height="545" alt="Image" src="https://github.com/user-attachments/assets/1e901f8a-c18d-48b8-abf4-33c638279a7d" />
 
 - 한쪽 방향으로만 자식 노드가 있는 트리이다.
     - 왼쪽 편향 트리: 모든 노드가 왼쪽 자식만 가지는 구조이다.
@@ -44,7 +44,7 @@
 
 #### 균형 이진 트리(Balanced Binary Tree)
 
-<img width="637" height="579" alt="Image" src="https://github.com/user-attachments/assets/738f2932-bfb9-458d-85a3-b2c7a264cc8f" />
+<img width="500" height="579" alt="Image" src="https://github.com/user-attachments/assets/738f2932-bfb9-458d-85a3-b2c7a264cc8f" />
 
 - 트리의 모든 서브트리들이 균형을 이루며, 높이 차이가 일정한 한계를 넘지 않도록 유지된다
 - 대표적으로 AVL Tree와 Red-Black Tree가 있다.
@@ -65,7 +65,7 @@
 # 2. AVL Tree
 ## 2.1. AVL Tree 란?
 
-<img width="510" height="340" alt="Image" src="https://github.com/user-attachments/assets/85be7600-bb90-4625-8acb-2759dac951b4" />
+<img width="500" height="340" alt="Image" src="https://github.com/user-attachments/assets/85be7600-bb90-4625-8acb-2759dac951b4" />
 
 - 균형 이진 탐색 트리(Self-balancing Binary Search Tree)의 일종으로, 트리의 높이를 항상 일정하게 유지하여 탐색, 삽입, 삭제 연산에서 **O(log n)**의 성능을 보장하는 자료구조이다.
 - 모든 노드에서 왼쪽 서브트리와 오른쪽 서브트리의 높이 차이가 최대 1이 되도록 유지하는 구조이다.
@@ -81,10 +81,9 @@
     - `왼쪽 높이 - 오른쪽 높이`
 
 - **균형을 깨트리는 연산**
-
-<img width="1155" height="449" alt="Image" src="https://github.com/user-attachments/assets/df6cdd77-fd88-4ad2-92e8-e8a897a12286" />
-
-    - 삽입 또는 삭제 시, 특정 노드에서 균형 인수가 2 이상이 되면 균형이 깨진다.
+     - 삽입 또는 삭제 시, 특정 노드에서 균형 인수가 2 이상이 되면 균형이 깨진다.
+  
+<img width="600" height="449" alt="Image" src="https://github.com/user-attachments/assets/df6cdd77-fd88-4ad2-92e8-e8a897a12286" />
 
 - **회전 연산**
     - 트리가 균형이 깨지는 경우 회전 연산을 통해 균형을 되찾는다.
@@ -100,7 +99,7 @@
 # 3. RB Tree
 ## 3.1. RB Tree 란?
 
-<img width="838" height="313" alt="Image" src="https://github.com/user-attachments/assets/79b6922c-d820-4f69-8646-13dded1922a7" />
+<img width="800" height="313" alt="Image" src="https://github.com/user-attachments/assets/79b6922c-d820-4f69-8646-13dded1922a7" />
 
 - 균형 이진 탐색 트리(Self-balancing Binary Search Tree)의 한 종류로, 삽입 및 삭제 연산이 발생할 때도 트리의 균형을 유지하여 탐색, 삽입, 삭제 등의 연산을 **O(log n)**의 시간 복잡도를 보장한다.
 - AVL Tree와 마찬가지로 균형 유지가 목표지만, AVL트리보다 덜 엄격한 방식으로 균형을 유지한다.
@@ -120,7 +119,7 @@
 ## 3.3. Red-Black Tree의 규칙
 Red-Black Tree는 각 노드에 추가적인 색 정보(Red 또는 Black)를 저장하며, 다음 규칙을 만족해야 한다.
 
-<img width="683" height="603" alt="Image" src="https://github.com/user-attachments/assets/0337fbd5-63b5-4ad9-bf2d-f611e85876c8" />
+<img width="600" height="603" alt="Image" src="https://github.com/user-attachments/assets/0337fbd5-63b5-4ad9-bf2d-f611e85876c8" />
 
 
 1. 노드 색상 규칙: 각 노드는 Red 또는 Black이다.
@@ -158,7 +157,7 @@ Red-Black Tree는 각 노드에 추가적인 색 정보(Red 또는 Black)를 저
 # 4. B-Tree
 ## 4.1. B-Tree 란?
 
-<img width="1125" height="349" alt="Image" src="https://github.com/user-attachments/assets/90835e3a-7c0f-4284-a244-9d1589d1c91b" />
+<img width="600" height="349" alt="Image" src="https://github.com/user-attachments/assets/90835e3a-7c0f-4284-a244-9d1589d1c91b" />
 
 - Binary Tree를 확장해 하나의 노드가 가질 수 있는 자식 노드의 최대 숫자가 2보다 큰 트리 구조이다.
 - 최대 M개의 자식을 가질 수 있는 B-Tree를 M차 B-Tree라고 한다.
@@ -257,7 +256,7 @@ Red-Black Tree는 각 노드에 추가적인 색 정보(Red 또는 Black)를 저
     - 사이클이 없는 그래프이다.
     - 방향 그래프의 유향 비순환 그래프(Directed Acyclic Graph, DAG)라고도 한다.
   
-<img width="1102" height="702" alt="Image" src="https://github.com/user-attachments/assets/71847054-546a-4bcf-adb7-658729b2e004" />
+<img width="800" height="702" alt="Image" src="https://github.com/user-attachments/assets/71847054-546a-4bcf-adb7-658729b2e004" />
 
 - **완전 그래프(Complete Graph)**
     - 모든 노드가 서로 연결된 그래프이다.
